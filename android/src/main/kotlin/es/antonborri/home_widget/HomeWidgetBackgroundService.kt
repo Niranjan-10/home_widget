@@ -55,6 +55,7 @@ class HomeWidgetBackgroundService : MethodChannel.MethodCallHandler, JobIntentSe
                 engine?.dartExecutor?.executeDartCallback(callback)
             }
         }
+        Log.d("HOME WIDGET ===>",engine==null)
         channel = MethodChannel(engine!!.getDartExecutor().getBinaryMessenger(),
                 "home_widget/background")
         channel.setMethodCallHandler(this)
